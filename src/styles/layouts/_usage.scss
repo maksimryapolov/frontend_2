@@ -1,0 +1,45 @@
+.b-usage {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    font-family: 'Raleway';
+    font-weight: 800;
+    font-size: rem(14);
+    color: $white;
+
+
+    &__item {
+        flex: 1;
+        padding: 30px 110px;
+        display: flex;
+        align-items: center;
+    }
+
+    &__icon-block {
+        width: 60px;
+        height: 60px;
+        border-radius: 50%;
+        background-color: $white;
+        margin-right: 20px;
+        
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    &__icon {
+        width: 20px;
+        height: 20px;
+        fill: $black;
+    }
+
+    &__wrapper {
+        line-height: rem(20);
+    }
+
+    &__count {}
+
+    &__text {
+        white-space: nowrap;
+    }
+}

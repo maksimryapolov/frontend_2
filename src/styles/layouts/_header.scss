@@ -1,0 +1,147 @@
+.b-header {
+    height: 100vh;
+    color: $white;
+    font-family: 'Raleway';
+    font-weight: 600;
+    @include bg-aqua-gradient('../../img/header_bg.jpg');
+
+    @media (max-width: $screem-md-max) {
+        height: auto;
+    }
+
+    &__outer {
+        padding: 0 20px;
+    }
+
+    &__top {
+        flex-shrink: 1;
+
+        &_offset-top {
+            margin-top: 50px;
+        }
+    }
+
+    &__main {
+        flex-grow: 1;
+        display: flex;
+        align-items: center;
+    }
+
+    &__main-wrapper {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        
+        @media (max-width: $screem-md-max) {
+            flex-direction: column;
+        }
+    }
+
+    &__inner {
+        max-width: $container;
+        margin: auto;
+        display: flex;
+        flex-direction: column;
+        height: 100%;
+        position: relative;
+        z-index: 5;
+    }
+
+    &__description {
+        // width: 40%;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+
+        @media (max-width: $screem-md-max) {
+            width: 100%;
+            padding: 40px 0 40px 0;
+        }
+
+        @media (min-width: $screen-lg) {
+            width: 40%;
+        }
+    
+    }
+
+    &__title {
+        font-size: rem(55);
+        margin: 0;
+    }
+
+    &__title {
+        text-transform: uppercase;
+    }
+
+    &__text {
+        font-weight: 400;
+        line-height: rem(35);
+    }
+
+    &__video {
+        background-image: url('../../img/video-bg.jpg');
+        background-color: transparentize($white, .1);
+        background-blend-mode: color;
+        background-position: 50% 50%;
+        background-repeat: no-repeat;
+        background-size: cover;
+        height: 320px;
+        border: 1px solid $black;
+        border-radius: 3px;
+        color: $dark-blue;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+        box-shadow: 0 10px 15px transparentize($black, .6);
+
+        @media (max-width: $screem-md-max) {
+            margin-bottom: 25px;
+            margin-left: auto;
+            margin-right: auto;
+            width: 100%;
+        }
+
+        @media (min-width: $screen-lg) {
+            width: 600px;
+        }
+    }
+    
+
+    &__play-btn {
+        position: relative;
+        width: 60px;
+        height: 60px;
+        background-color: $dark-blue;
+        border-radius: 3px;
+        cursor: pointer;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        &:after {
+            position: absolute;
+            content: '';
+            background-image: url('../../img/icons/right-arrow.svg');
+            width: 15px;
+            height: 15px;
+        }
+
+        &_indent {
+            margin-bottom: 20px;
+        }
+    }
+
+    &__video-desc {
+        font-weight: 700;
+    }
+
+    &__btn-block {
+        margin-top: 20px;
+
+
+        button:not(:first-child) {
+            margin-left: 30px;
+        }
+    }
+}

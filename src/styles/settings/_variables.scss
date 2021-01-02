@@ -1,0 +1,57 @@
+// Colors variables
+$white: #fff;
+$black: #000;
+$dark-blue: #061e37;
+$dark-blue2: #1d2e40;
+$gray: #b0bec5;
+$gray-blue: #78909c;
+
+// block usage
+$aqua: #80d8ff;
+$heavenly: #82b1ff;
+$purple: #b388ff;
+$pink: #ea80fc;
+
+// Base font size
+$base-font-size: 16px !default;
+
+// size
+$base: 4px;
+
+$container: 1440px;
+
+// Breakpoints for include-media mixins
+$breakpoints: (
+  phoneSmall: 375px,
+  phoneReg: 414px,
+  tabletSmall: 768px,
+  tabletMid: 800px,
+  tabletReg: 1024px,
+  desktopSmall: 1280px,
+  desktopMid: 1366px,
+  desktopReg: 1440px,
+  desktopBig: 1600px,
+  desktopLarge: 1920px,
+);
+
+$screen-sm: 576px;
+$screen-md: 768px;
+$screen-lg: 992px;
+$screen-xl: 1200px;
+
+$screem-sm-max: 767px;
+$screem-md-max: 991px;
+$screem-lg-max: 1199px;
+
+%btn {
+  padding: 17px 34px;
+  border-radius: 5px;
+  border: none;
+  outline: none;
+  text-transform: uppercase;
+  cursor: pointer;
+}
+
+%btn-shadow {
+  box-shadow: 0 10px 15px transparentize($black, .7);
+}

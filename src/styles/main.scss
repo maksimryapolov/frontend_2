@@ -1,0 +1,15 @@
+// Settings
+@import 'settings/all';
+
+// Normalize CSS (through PostCSS-plugin)
+@import-normalize;
+
+// Libs styles
+@import 'libs/all';
+
+// Icons styles
+@import 'generated/sprite-mono-generated';
+@import 'generated/sprite-multi-generated';
+
+@import 'layouts/all';
+@import 'components/all';

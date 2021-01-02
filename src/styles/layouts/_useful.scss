@@ -1,0 +1,49 @@
+.b-useful {
+    font-family: 'Raleway';
+
+    &__outer {
+        padding: 95px 20px ;
+    }
+
+    &__inner{
+        max-width: $container;
+        margin: 0 auto;
+    }
+
+    &__slogans {
+        text-align: center;
+        width: 50%;
+        margin: 0 auto;
+    }
+
+    &__title {
+        margin: 0;
+        color: $dark-blue;
+        font-weight: 600;
+        font-size: rem(45);
+    }
+
+    &__subtitle {
+        font-weight: 600;
+        color: $gray;
+        font-size: rem(25);
+
+        &_ident {
+            margin-top: 13px;
+            margin-bottom: 18px;
+        }
+    }
+
+    &__description {
+        color: $gray;
+        line-height: rem(25);
+        font-size: rem(15);
+    }
+
+    // &__content {}
+
+    &__btn {
+        text-align: center;
+    }
+
+}

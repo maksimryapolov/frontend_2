@@ -1,0 +1,93 @@
+.b-contact {
+    font-family: 'Raleway';
+    color: $dark-blue;
+
+    &__outer {
+        padding: 50px 20px 100px 20px;
+        background: #fafafa;
+    }
+
+    &__head {
+        text-align: center;
+        width: 50%;
+        margin: auto;
+    }
+
+    &__title {
+        margin: 0 0 25px 0;
+        font-size: rem(45);
+        font-weight: 600;
+        color: $dark-blue2;
+    }
+
+    &__desc {
+        font-size: rem(14);
+        line-height: rem(25);
+    }
+
+    &__form-block {
+        display: flex;
+        justify-content: center;
+        flex-wrap: wrap;
+        max-width: 50%;
+        margin: auto;
+
+        &_ident {
+            margin-top: 45px;
+        }
+    }
+
+    &__form-field {
+        flex-basis: 50%;
+        margin-bottom: 20px;
+
+        &:nth-child(odd) {
+            padding-right: 20px;
+        }
+        &:nth-child(even) {
+            padding-left: 20px;
+        }
+
+        input,
+        textarea {
+            width: 100%;
+            border: 1px solid $dark-blue;
+            border-radius: 5px;
+            outline: none;
+            padding: 15px;
+
+            &::placeholder {
+                color: $dark-blue;
+                opacity: 1;
+            }
+        }
+
+        &.textarea {
+            flex-basis: 100%;
+            padding: 0;
+
+            textarea {
+                width: 100%;
+                resize: none;
+            }
+        }
+    }
+
+    &__form-footer {
+        flex-basis: 100%;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    &__field-wrapper {
+        display: flex;
+        align-items: center;
+
+        input {
+            margin-right: 10px;
+            border: 2px solid $dark-blue;
+            border-radius: 5px;
+        }
+    }
+}

@@ -1,0 +1,43 @@
+.b-advantages {
+    display: flex;
+    justify-content: space-between;
+
+    &_ident {
+        margin-top: 90px;
+        margin-bottom: 80px;
+    }
+
+    &__item {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        flex-basis: 350px;
+
+    }
+
+    &__icon {
+        width: 70px;
+        height: 70px;
+        background-position: 50% 50%;
+        background-repeat: no-repeat;
+        background-size: cover;
+    }
+
+    &__title {
+        color: $dark-blue;
+        font-weight: 600;
+        font-size: 20px;
+
+        &_ident {
+            padding-top: 40px;
+            padding-bottom: 15px;
+        }
+    }
+
+    &__desc {
+        color: $gray-blue;
+        text-align: center;
+        font-size: rem(15);
+        line-height: rem(20);
+    }
+}

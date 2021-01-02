@@ -1,0 +1,22 @@
+.b-nav {
+    &__wrapper {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    &__button {
+        button {
+            background: transparentize($black, 1);
+            border: none;
+            color: inherit;
+            outline: none;
+            cursor: pointer;
+            border: 2px solid $white;
+            border-radius: 3px;
+            padding: 5px 20px;
+        }
+    }
+
+}

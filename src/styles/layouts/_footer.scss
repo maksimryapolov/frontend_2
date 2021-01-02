@@ -1,0 +1,67 @@
+.b-footer {
+    color: $white;
+    font-family: 'Raleway';
+
+    &__outer {
+        background-color: $dark-blue;
+        padding: 90px 20px 100px 20px;
+    }
+
+    &__inner {
+        max-width: 1440px;
+        margin: auto;
+    }
+
+    &__wrapper {
+        display: flex;
+        flex-direction: column;
+    }
+
+    &__row:not(:last-child) {
+        margin-bottom: 50px;
+    }
+
+    &__top {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    &__bottom {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    &__sections {
+        display: flex;
+    }
+
+    &__section {
+        p {
+            margin: 0;
+        }
+    }
+
+    &__section:not(:last-child){
+        display: flex;
+        align-items: center; 
+        position: relative;
+
+        p {
+            margin-right: 40px;
+            display: block;
+        }
+
+        &::after {
+            content: '';
+            width: 5px;
+            height: 5px;
+            position: absolute;
+            display: inline-block;
+            border-radius: 50%;
+            background-color: $white;
+            right: 15%;
+        }
+    }
+}

@@ -1,0 +1,8 @@
+mixin usage(className, icon='./img/icons/download.svg#download', count='3000+', text='download')
+    .b-usage__item(class=className)
+        .b-usage__icon-block
+            svg
+                use(xlink:href=icon)
+        .b-usage__wrapper
+            .b-usage__count=count
+            .b-usage__text=text

@@ -1,0 +1,17 @@
+.b-logo {
+    display: flex;
+    align-items: center;
+
+    &__icon {
+        width: 30px;
+        height: 30px;
+        background-image: url('../../img/icons/dart-board.svg');
+        margin-right: 10px;
+    }
+
+    &__slogan {
+        div:first-child {
+            font-weight: 400;
+        }
+    }
+}

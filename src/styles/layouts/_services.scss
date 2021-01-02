@@ -1,0 +1,30 @@
+.b-services {
+    font-family: 'Raleway';
+
+    &__outer {
+        padding: 95px 20px;
+    }
+
+    &__wrapper-head {
+        text-align: center;
+        width: 50%;
+        margin: auto;
+    }
+
+    &__title {
+        margin: 0 0 25px 0;
+        font-size: rem(45);
+        font-weight: 600;
+        color: $dark-blue2;
+    }
+
+    &__desc {
+        font-size: rem(14);
+        line-height: rem(25);
+        color: $gray;
+    }
+
+    &__content {
+        padding: 50px 0;
+    }
+}

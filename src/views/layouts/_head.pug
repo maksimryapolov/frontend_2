@@ -1,0 +1,12 @@
+include ../mixins/all.pug
+<!DOCTYPE html>
+html(lang="ru")
+    head
+        meta(charset="UTF-8")
+        meta(name="viewport", content="width=device-width, initial-scale=1.0")
+        title Service
+        include ../blocks/_head-styles
+    body
+        include ../blocks/_header.pug
+        block content
+        include ../blocks/_footer.pug

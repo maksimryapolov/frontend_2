@@ -1,0 +1,50 @@
+ul {
+    margin: 0;
+    padding: 0;
+
+    li {
+        list-style: none;
+    }
+}
+
+.btn {
+    @extend %btn;
+    @extend %btn-shadow;
+}
+
+.btn-blue {
+    @extend %btn;
+    @extend %btn-shadow;
+
+    background-color: $dark-blue;
+    color: $white;
+}
+
+.btn-light-green {
+    @extend %btn;
+    @extend %btn-shadow;
+
+    background-color: #1de9b6;
+    color: $white;
+}
+
+.aqua {
+    background-color: $aqua;
+    @include svg-color($aqua)
+}
+
+.heavenly {
+    background-color: $heavenly;
+    @include svg-color($heavenly)
+}
+
+.purple {
+    background-color: $purple;
+    @include svg-color($purple)
+}
+
+.pink {
+    background-color: $pink;
+    @include svg-color($pink)
+}
+
