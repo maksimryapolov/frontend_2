@@ -3,6 +3,24 @@
     margin: 0 auto;
     justify-content: space-between;
 
+    &.top {
+        @media (max-width: $screem-md-max) {
+            display: none;
+        }
+    }
+
+    &.bottom {
+        @media (max-width: $scerem-sm-max) {
+            flex-direction: column;
+        }
+    }
+
+    &.bottom {
+        .b-menu__item:not(:last-child){
+            margin-bottom: $base*4;
+        }
+    }
+
     &__item:not(:last-child) {
         margin-right: 45px;
     }

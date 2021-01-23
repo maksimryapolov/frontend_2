@@ -3,6 +3,8 @@ nav.b-nav
         .b-nav__logo
             +logo
         .b-nav__menu-block
-            +menu
+            +menu('top')
+            svg.b-nav__icon-burger#mobile
+                use(xlink:href="./img/icons/list.svg#list")
         .b-nav__button
             button sign up

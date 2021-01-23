@@ -1,4 +1,8 @@
 {
+
+    "globals": {
+        "$": "readonly"
+    },
     "env": {
         "browser": true,
         "commonjs": true,

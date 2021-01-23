@@ -17,12 +17,22 @@
     &__wrapper {
         display: flex;
         align-items: center;
-        flex-wrap: wrap;
+
+        @media (max-width: $screem-md-max) {
+            flex-direction: column;
+        }
+        
     }
 
     &__content,
     &__slider-block {
-        flex-basis: 50%;
+        @media (max-width: $screem-md-max) {
+            flex-basis: 100%;
+        }
+
+        @media (min-width: $screen-lg) {
+            flex-basis: 50%;
+        }
     }
 
     &__slider-block {

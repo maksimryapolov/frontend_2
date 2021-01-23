@@ -38,7 +38,6 @@
     }
 
     &__form-field {
-        flex-basis: 50%;
         margin-bottom: 20px;
 
         &:nth-child(odd) {
@@ -46,6 +45,22 @@
         }
         &:nth-child(even) {
             padding-left: 20px;
+        }
+
+        @media (min-width: $screen-md) {
+            flex-basis: 50%;
+        }
+
+        @media (max-width: $scerem-sm-max) {
+            flex-basis: 100%;
+
+            &:nth-child(even) {
+                padding-left: 0;
+            }
+
+            &:nth-child(odd) {
+                padding-right: 0;
+            }   
         }
 
         input,
@@ -78,6 +93,15 @@
         display: flex;
         justify-content: space-between;
         align-items: center;
+
+        @media (max-width: $scerem-sm-max) {
+            flex-direction: column;
+
+            button {
+                margin-top: $base * 4; 
+            }
+        }
+        
     }
 
     &__field-wrapper {

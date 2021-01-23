@@ -35,6 +35,10 @@
 
     &__sections {
         display: flex;
+
+        @media (max-width: $scerem-sm-max) {
+            flex-direction: column;
+        }
     }
 
     &__section {
@@ -47,6 +51,10 @@
         display: flex;
         align-items: center; 
         position: relative;
+
+        @media (max-width: $scerem-sm-max) {
+            margin-bottom: $base*4;
+        }
 
         p {
             margin-right: 40px;
@@ -62,6 +70,10 @@
             border-radius: 50%;
             background-color: $white;
             right: 15%;
+
+            @media (max-width: $scerem-sm-max) {
+                display: none;
+            }
         }
     }
 }

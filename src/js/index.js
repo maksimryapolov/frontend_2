@@ -45,10 +45,58 @@ $(function () {
         nextArrow: '<div id="next" type="button" class="b-slider__down"></div>'
     });
 })();
-  
+
 (() => {
-    let slide = $('#slide-team');
-    let desName = 'desabled';
+    const team = [
+        {
+            id: 1,
+            name: 'Robert Ross',
+            desc: 'Как принято считать, активно развивающиеся страны третьего мира и по сей день остаются уделом либералов, которые жаждут быть описаны максимально подробно.'
+        },
+        {
+            id: 2,
+            name: 'Peter Barker',
+            desc: 'А также сторонники тоталитаризма в науке, инициированные исключительно синтетически, объективно рассмотрены соответствующими инстанциями!'
+        },
+        {
+            id: 3,
+            name: 'Mark Ferguson',
+            desc: 'Также как понимание сути ресурсосберегающих технологий, а также свежий взгляд на привычные вещи - безусловно открывает новые горизонты для экспериментов, поражающих по своей масштабности и грандиозности.'
+        },
+        {
+            id: 4,
+            name: 'Brett Ramsey',
+            desc: 'Как принято считать, акционеры крупнейших компаний рассмотрены исключительно в разрезе маркетинговых и финансовых предпосылок.'
+        }
+    ];
+
+    const slide = $('#slide-team');
+    const name = $("#item-name");
+    const desc = $("#item-desc");
+
+    const changeText = (title='', description='') => {
+        name.text(title);
+        desc.text(description);
+    };
+
+    const setText = (slick) => {
+        slick.$slides.each((index, item) => {
+            let elem = $(item).find('.b-slide-team__item');
+            let dataId = elem.data('id');
+
+            if(elem.closest('.slick-slide').hasClass('slick-center')) {
+                team.forEach((el) => {
+                    if(el.id == dataId) {
+                        changeText(el.name, el.desc)
+                    }
+                });
+            }
+        });
+    };
+
+    slide.on('init', function (event, slick) {
+        setText(slick);
+    });
 
     slide.slick({
         infinite: true,
@@ -57,19 +105,41 @@ $(function () {
         slidesToScroll: 1,
         arrows: false,
         swipe: false,
+        centerMode: true,
+        responsive: [
+            {
+                breakpoint: 767,
+                settings: {
+                    slidesToShow: 1,
+                    centerMode: true,
+                }
+            }
+        ]
     });
 
-    slide.find('.b-slide-team__item').each(function(index, item) {
-        let elem = $(item).closest('.slick-slide');
-        if(!$(item).hasClass(desName) && $(elem).hasClass('slick-cloned')) {
-        $(item).addClass(desName);
-        }
-    });
-
-    slide.on('beforeChange', function (event, slick, currentSlide, nextSlide) {
-        $(`div.slick-slide[data-slick-index='${currentSlide + 1}']`).find('.b-slide-team__item').toggleClass(desName);
-        $(`div.slick-slide[data-slick-index='${currentSlide + 2}']`).find('.b-slide-team__item').toggleClass(desName);
+    slide.on('afterChange', function (event, slick) {
+        setText(slick);
     })
+
+})();
+
+(() => {
+    const btn = $('#mobile');
+    const blockMenu = $('#mobile-container');
+    const wrapperMenu = $('#mobile-wrapper');
+    if(btn) {
+        btn.on('click', () => {
+            blockMenu.toggleClass('open');
+            document.body.classList.toggle('mobile-open');
+        });
+
+        wrapperMenu.on('click', function(e) {
+            if(e.target === this) {
+                blockMenu.toggleClass('open');
+                document.body.classList.toggle('mobile-open');
+            }
+        })
+    }
 })();
   
   
